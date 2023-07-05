@@ -2,7 +2,17 @@
 
 ## 使用方法
 
-1. 定义一个请求对象类作为请求参数的接收者，并给其添加上 `AsFormBody` 的注解，如：
+1. 构建 `Retrofit` 对象时，添加对应的转换器
+
+   ```java
+   new Retrofit.Builder()
+      .client(okHttpClient)
+      .addConverterFactory(FormBodyConverterFactory.create())
+      .baseUrl("...")
+      .build();
+   ```
+
+2. 定义一个请求对象类作为请求参数的接收者，并给其添加上 `AsFormBody` 的注解，如：
 
    ```java
    @AsFormBody
@@ -14,7 +24,7 @@
    }
    ```
 
-2. 定义 api service
+3. 定义 api service
 
    ```java
    public interface TestApi {
@@ -25,7 +35,7 @@
    }
    ```
 
-3. 发起请求，所有请求对象上的参数值【`toString()` 方法的值】都会被当做入参提交到服务器
+4. 发起请求，所有请求对象上的参数值【`toString()` 方法的值】都会被当做入参提交到服务器
 
    ```java
    public void test() {
@@ -47,7 +57,7 @@
    serialized_key1=value1&key2=value2
    --> END POST (168-byte body)
    ```
-   
+
    
 
 ## 高级用法
