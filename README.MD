@@ -43,7 +43,7 @@
    ```shell
    --> POST https://m.baidu.com/test/post
    Content-Type: application/x-www-form-urlencoded
-   Content-Length: 40
+   Content-Length: 41
    serialized_key1=value1&key2=value2
    --> END POST (168-byte body)
    ```
@@ -84,3 +84,13 @@
    ```
 
    最终所有的入参都会被提交到服务器。
+   
+   ```shell
+   --> POST https://m.baidu.com/test/post
+   Content-Type: application/x-www-form-urlencoded
+   Content-Length: 83
+   keyA1=valueA1&keyB1=valueB1&SerializedName_Key_B2=valueB2
+   --> END POST (168-byte body)
+   ```
+   
+   
