@@ -8,7 +8,7 @@ import io.github.chentao7v.converter.FlatMembers
 /**
  * create by chentao on 2023-07-05.
  */
-@AsFormBody
+@AsFormBody(ignoreStaticFields = true)
 class TestRequest {
 
   @SerializedName("serialized_key1")
