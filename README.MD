@@ -41,7 +41,7 @@
    提交的数据：
 
    ```shell
-   --> POST https://m.baidu.com/testPost
+   --> POST https://m.baidu.com/test/post
    Content-Type: application/x-www-form-urlencoded
    Content-Length: 40
    serialized_key1=value1&key2=value2

@@ -10,7 +10,7 @@ import retrofit2.http.POST
  */
 interface TestApi {
 
-  @POST("testPost")
+  @POST("test/post")
   fun doPost(@Body body: TestRequest): Call<ResponseBody>
 
 }
