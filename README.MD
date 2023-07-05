@@ -40,11 +40,15 @@
 
    提交的数据：
 
-   > --> POST https://m.baidu.com/testPost
-   > Content-Type: application/x-www-form-urlencoded
-   > Content-Length: 40
-   > serialized_key1=value1&key2=value2
-   > --> END POST (168-byte body)
+   ```shell
+   --> POST https://m.baidu.com/testPost
+   Content-Type: application/x-www-form-urlencoded
+   Content-Length: 40
+   serialized_key1=value1&key2=value2
+   --> END POST (168-byte body)
+   ```
+   
+   
 
 ## 高级用法
 
