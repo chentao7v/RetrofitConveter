@@ -24,7 +24,7 @@
    }
    ```
 
-3. 定义 api service。
+3. 定义 api service，POST 请求接收的入参为对应请求对象，如 `@Body TestRequest`：
 
    ```java
    public interface TestApi {
