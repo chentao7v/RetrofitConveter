@@ -40,7 +40,7 @@ public final class FormBodyConverterFactory extends Converter.Factory {
         boolean ignoreStaticFields = annotation.ignoreStaticFields();
         return new ParamsRequestBodyConverter<>(ignoreStaticFields);
       }
-      Log.w(TAG, "If you want convert a Java Bean into a Http Form, please add @AsFormBody on your Class");
+      Log.w(TAG, "If you want convert a Java Bean into an Http Form, please add @AsFormBody on your Class");
     }
     return null;
   }
